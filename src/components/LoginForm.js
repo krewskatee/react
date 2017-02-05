@@ -10,7 +10,6 @@ import {
 import { connect } from 'react-redux';
 import { loggedin, attempt, errors, login } from '../actions';
 
-
 class LoginForm extends Component {
   onPress() {
     this.props.login();
@@ -18,12 +17,18 @@ class LoginForm extends Component {
 
   renderButton() {
     if (this.props.fetching) {
-      return (<ActivityIndicator
-      style={styles.spinnerStyle}
+      return (
+      <TouchableOpacity
+      style={styles.facebookButtonContainer}
+      >
+      <ActivityIndicator
       color={'#ffffff'}
-      size='large'
-      />);
-    }
+      size='small'
+      />
+      </TouchableOpacity>
+
+  );
+}
     return (
       <TouchableOpacity
       onPress={this.onPress.bind(this)}
