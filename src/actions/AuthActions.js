@@ -1,5 +1,6 @@
 import firebase from 'firebase';
 import { config } from '../config';
+import { Actions } from 'react-native-router-flux';
 
 import {
   LOGIN_USER_SUCCESS,
@@ -46,6 +47,7 @@ export function login() {
         })
         .then(() => {
             dispatch(loggedin());
+            Actions.main();
         })
         .catch(() => {
             dispatch(errors());

@@ -4,12 +4,12 @@ import {
   Text,
   TouchableOpacity,
   StatusBar,
-  Image
+  Image,
+  ActivityIndicator
  } from 'react-native';
-import firebase from 'firebase';
 import { connect } from 'react-redux';
-import { Spinner } from './Spinner.js';
 import { loggedin, attempt, errors, login } from '../actions';
+
 
 class LoginForm extends Component {
   onPress() {
@@ -18,7 +18,11 @@ class LoginForm extends Component {
 
   renderButton() {
     if (this.props.fetching) {
-      return <Spinner size="large" />;
+      return (<ActivityIndicator
+      style={styles.spinnerStyle}
+      color={'#ffffff'}
+      size='large'
+      />);
     }
     return (
       <TouchableOpacity
@@ -96,6 +100,9 @@ const styles = {
     borderRadius: 5,
     marginTop: 15,
     marginBottom: 150,
+  },
+  spinnerStyle: {
+    marginBottom: 150
   },
   buttonText: {
     textAlign: 'center',

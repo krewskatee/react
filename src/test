@@ -1,4 +1,0 @@
-authenticate(provider) {
-  firebase.auth().signInWithRedirect(provider)
-    .then(Alert.alert('asas', 'dont die'));
-}
