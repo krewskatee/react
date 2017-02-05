@@ -6,35 +6,28 @@ import {
   StatusBar,
   Image
  } from 'react-native';
-
 import firebase from 'firebase';
+import { connect } from 'react-redux';
+import { Spinner } from './Spinner.js';
+import { loggedin, attempt, errors, login } from '../actions';
 
-const FBSDK = require('react-native-fbsdk');
+class LoginForm extends Component {
+  onPress() {
+    this.props.login();
+  }
 
-const { LoginManager, AccessToken } = FBSDK;
-
-const provider = firebase.auth.FacebookAuthProvider;
-
-export default class LoginForm extends Component {
-  fbAuth() {
-    LoginManager.logInWithReadPermissions(['public_profile'])
-    .then(loginResult => {
-        if (loginResult.isCancelled) {
-            console.log('user canceled');
-            return;
-        }
-        AccessToken.getCurrentAccessToken()
-        .then(accessTokenData => {
-            const credential = provider.credential(accessTokenData.accessToken);
-            return firebase.auth().signInWithCredential(credential);
-        })
-        .then(credData => {
-            console.log(credData);
-        })
-        .catch(err => {
-            console.log(err);
-        });
-    });
+  renderButton() {
+    if (this.props.fetching) {
+      return <Spinner size="large" />;
+    }
+    return (
+      <TouchableOpacity
+      onPress={this.onPress.bind(this)}
+      style={styles.facebookButtonContainer}
+      >
+        <Text style={styles.buttonText}>Log in using Facebook</Text>
+      </TouchableOpacity>
+    );
   }
 
   render() {
@@ -53,12 +46,7 @@ export default class LoginForm extends Component {
           </View>
         </View>
         <View style={styles.buttonContainer}>
-          <TouchableOpacity
-          onPress={this.fbAuth.bind(this)}
-          style={styles.facebookButtonContainer}
-          >
-            <Text style={styles.buttonText}>Log in using Facebook</Text>
-          </TouchableOpacity>
+          {this.renderButton()}
         </View>
       </View>
     );
@@ -128,3 +116,11 @@ const styles = {
     marginTop: 10
   }
 };
+
+const mapStateToProps = ({ auth, profile }) => {
+  const { fetching, fetched, error } = auth;
+  const { id, name } = profile;
+  return { fetching, fetched, error, id, name };
+};
+
+export default connect(mapStateToProps, { loggedin, errors, attempt, login })(LoginForm);

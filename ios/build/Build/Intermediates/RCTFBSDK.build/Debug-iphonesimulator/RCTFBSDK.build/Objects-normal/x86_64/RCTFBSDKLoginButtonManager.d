@@ -2,6 +2,7 @@ dependencies: \
   /Users/anon/Desktop/reactprojects/reactProject/node_modules/react-native-fbsdk/ios/RCTFBSDK/login/RCTFBSDKLoginButtonManager.m \
   /Users/anon/Desktop/reactprojects/reactProject/node_modules/react-native-fbsdk/ios/RCTFBSDK/login/RCTFBSDKLoginButtonManager.h \
   /Users/anon/Documents/FacebookSDK/FBSDKLoginKit.framework/Modules/module.modulemap \
+  /Users/anon/Desktop/reactprojects/reactProject/node_modules/react-native-fbsdk/ios/../../../ios/Pods/Firebase/Core/Sources/module.modulemap \
   /Users/anon/Documents/FacebookSDK/FBSDKCoreKit.framework/Modules/module.modulemap \
   /Users/anon/Documents/FacebookSDK/Bolts.framework/Modules/module.modulemap \
   /Users/anon/Documents/FacebookSDK/Bolts.framework/Headers/BFWebViewAppLinkResolver.h \

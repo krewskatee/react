@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import logger from 'redux-logger';
+import thunk from 'redux-thunk';
 import firebase from 'firebase';
 import reducers from './reducers';
 import Router from './Router';
 
+const middleware = applyMiddleware(thunk);
+const loggerware = applyMiddleware(logger());
 
 class App extends Component {
   componentWillMount() {
@@ -20,7 +24,7 @@ firebase.initializeApp(config);
 
 
   render() {
-    const store = createStore(reducers);
+    const store = createStore(reducers, middleware, loggerware);
     return (
       <Provider store={store}>
         <Router />

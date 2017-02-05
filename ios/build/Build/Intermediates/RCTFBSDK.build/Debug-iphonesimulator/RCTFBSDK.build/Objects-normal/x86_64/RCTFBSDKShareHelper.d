@@ -2,6 +2,7 @@ dependencies: \
   /Users/anon/Desktop/reactprojects/reactProject/node_modules/react-native-fbsdk/ios/RCTFBSDK/share/RCTFBSDKShareHelper.m \
   /Users/anon/Desktop/reactprojects/reactProject/node_modules/react-native-fbsdk/ios/RCTFBSDK/share/RCTFBSDKShareHelper.h \
   /Users/anon/Documents/FacebookSDK/FBSDKShareKit.framework/Modules/module.modulemap \
+  ../../../ios/Pods/Firebase/Core/Sources/module.modulemap \
   /Users/anon/Documents/FacebookSDK/FBSDKCoreKit.framework/Modules/module.modulemap \
   /Users/anon/Documents/FacebookSDK/Bolts.framework/Modules/module.modulemap \
   /Users/anon/Documents/FacebookSDK/Bolts.framework/Headers/BFWebViewAppLinkResolver.h \
@@ -19,6 +20,7 @@ dependencies: \
   /Users/anon/Documents/FacebookSDK/Bolts.framework/Headers/BFExecutor.h \
   /Users/anon/Documents/FacebookSDK/Bolts.framework/Headers/BFCancellationTokenSource.h \
   /Users/anon/Documents/FacebookSDK/Bolts.framework/Headers/BFCancellationTokenRegistration.h \
+  /Users/anon/Desktop/reactprojects/reactProject/node_modules/react-native-fbsdk/ios/../../../ios/Pods/Firebase/Core/Sources/module.modulemap \
   /Users/anon/Documents/FacebookSDK/Bolts.framework/Headers/BFCancellationToken.h \
   /Users/anon/Documents/FacebookSDK/Bolts.framework/Headers/Bolts.h \
   /Users/anon/Documents/FacebookSDK/FBSDKCoreKit.framework/Headers/FBSDKProfilePictureView.h \

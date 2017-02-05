@@ -2,6 +2,7 @@ dependencies: \
   /Users/anon/Desktop/reactprojects/reactProject/node_modules/react-native-fbsdk/ios/RCTFBSDK/share/RCTFBSDKSendButtonManager.m \
   /Users/anon/Desktop/reactprojects/reactProject/node_modules/react-native-fbsdk/ios/RCTFBSDK/share/RCTFBSDKSendButtonManager.h \
   /Users/anon/Desktop/reactprojects/reactProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTViewManager.h \
+  ../../../ios/Pods/Firebase/Core/Sources/module.modulemap \
   /Users/anon/Desktop/reactprojects/reactProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
   /Users/anon/Desktop/reactprojects/reactProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
   /Users/anon/Desktop/reactprojects/reactProject/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTConvert.h \
@@ -40,6 +41,7 @@ dependencies: \
   /Users/anon/Documents/FacebookSDK/Bolts.framework/Headers/BFExecutor.h \
   /Users/anon/Documents/FacebookSDK/Bolts.framework/Headers/BFCancellationTokenSource.h \
   /Users/anon/Documents/FacebookSDK/Bolts.framework/Headers/BFCancellationTokenRegistration.h \
+  /Users/anon/Desktop/reactprojects/reactProject/node_modules/react-native-fbsdk/ios/../../../ios/Pods/Firebase/Core/Sources/module.modulemap \
   /Users/anon/Documents/FacebookSDK/Bolts.framework/Headers/BFCancellationToken.h \
   /Users/anon/Documents/FacebookSDK/Bolts.framework/Headers/Bolts.h \
   /Users/anon/Documents/FacebookSDK/FBSDKCoreKit.framework/Headers/FBSDKProfilePictureView.h \
